@@ -1,7 +1,13 @@
+*{
+	background-color: black;
+}
+
+
 .container {
-	width: 900px;
+	width: 100%;
 	margin: 0 auto;
 	color: @secondary-color;
+
 }
 
 header {
@@ -9,19 +15,42 @@ header {
 	height: 100px;
 	margin-bottom: 20px;
 	display: flex;
-}
 
-header nav {
-	width: 80%;
-	height: 100%;
-	background: @primary-color;
-	margin-right: 2%;
-}
 
-header .logo {
+		nav {
+			width: 80%;
+			height: 100%;
+			background: @primary-color;
+			margin-right: 2%;
+			.center-content;
+
+			@media @laptop {
+				background-color: green;
+			}
+
+			@media @phone {
+				background-color: orange;
+				height: 50%;
+			}
+		}
+
+ .logo {
 	width: 20%;
 	height: 100%;
 	background: @primary-color;
+	.center-content;
+
+		@media @tablet {
+			background-color: purple;
+		}
+
+		@media @phone {
+			background-color: purple;
+			display: flex;
+			flex-direction: column;
+			order: 1;
+		}
+	}
 }
 
 .content {
@@ -32,30 +61,71 @@ header .logo {
 	display: flex;
 	flex-flow: wrap;
 	justify-content: space-evenly;
-}
 
-.content .boxes {
-	width: 45%;
-	height: 200px;
-	background: @primary-color;
-	color: white;
-	margin-bottom: 20px;
-	display: flex;
+ 	.boxes {
+		width: 45%;
+		height: 200px;
+		background: @primary-color;
+		color: white;
+		margin-bottom: 20px;
+		display: flex;
+		.center-content;
+	}
 }
 
 .content .box1 {
+	@media @laptop {
+		background-color: green;
+	}
+
+	@media @tablet {
+		width: 100%;
+	}
+
+	@media @phone {
+		background-color: orange;
+		width: 100%;
+	}
 	// style this at the right time!
 }
 
 .content .box2 {
+	@media @tablet {
+		background-color: purple;
+		width: 100%;
+	}
+
+	@media @phone {
+		background-color: orange;
+		width: 100%;
+	}
 	// style this at the right time!
 }
 
 .content .box3 {
+	@media @tablet {
+		background-color: purple;
+		width: 100%;
+	}
+	@media @phone {
+		width: 100%;
+	}
 	// style this at the right time!
 }
 
 .content .box4 {
+	@media @laptop {
+		background-color: green;
+		width: 100%;
+	}
+	@media @tablet {
+		width: 100%;
+	}
+
+	@media @phone {
+		background-color: orange;
+		width: 100%;
+	}
 	// style this at the right time!
 }
 
@@ -63,4 +133,8 @@ footer {
 	width: 100%;
 	height: 50px;
 	background: @primary-color;
+
+	@media @phone {
+		background-color: orange;
+	}
 }
